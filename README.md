@@ -1,98 +1,182 @@
-# temario-de-app-web
+# temario-deapp-web
+# temario-deapp-web
+< ins > 1.-Introducción al desarrollo web < ims >
 
-## Propósito de Aprendizaje 1: Comprender los fundamentos del desarrollo de aplicaciones web
 
-1.-Introducción al desarrollo web  
-El desarrollo web implica crear sitios y aplicaciones accesibles desde navegadores.  
-**Historia y evolución del desarrollo web:**  
-La web inició con páginas estáticas (Web 1.0), evolucionó hacia la Web 2.0 (más interacción y contenido generado por usuarios) y actualmente permite aplicaciones complejas, interactivas y similares a apps nativas (SPA, PWA).  
-**Tipos de aplicaciones web:**  
-- Estáticas: Solo muestran información fija, sin interacción con bases de datos.
-- Dinámicas: Generan contenido en tiempo real usando bases de datos.
-- SPA (Single Page Application): Actualizan datos sin recargar la página.
-- PWA (Progressive Web App): Funcionan offline, envían notificaciones y se pueden instalar como aplicaciones en dispositivos.
+Historia y evolución del desarrollo web.
+## 1. Historia y evolución del desarrollo web
+<img width="279" height="154" alt="image" src="https://github.com/user-attachments/assets/4ea1d808-f707-495b-bcfe-12af413e91c3" />
 
-2.-Arquitectura de aplicaciones web  
-**Cliente-Servidor:**  
-El navegador (cliente) solicita información al servidor, que responde con datos y archivos.  
-**Arquitectura de tres capas:**  
-- Presentación: Interfaz gráfica (frontend).
-- Lógica: Procesamiento y reglas de negocio (backend).
-- Datos: Almacenamiento y acceso a la información (base de datos).  
-**REST y API-first design:**  
-REST define la comunicación entre sistemas usando HTTP y recursos identificados por URLs. API-first significa diseñar primero la API para asegurar la correcta interacción entre frontend y backend.
+El desarrollo web ha evolucionado significativamente desde la creación de la World Wide Web en 1989 por Tim Berners-Lee. Inicialmente, las páginas web eran estáticas y solo contenían texto y enlaces. Con el tiempo, se introdujeron nuevas tecnologías, lo que permitió agregar imágenes, formularios y estilos.
 
-3.-Lenguajes y tecnologías fundamentales  
-- **HTML:** Estructura la página web.
-- **CSS:** Aplica estilos y diseño visual.
-- **JavaScript:** Agrega interactividad y funcionalidad en el navegador.
-- **PHP:** Procesa datos y lógica en el servidor.
-- **MySQL:** Sistema de gestión de bases de datos relacional.
+-  ** Década de los 90 ** : HTML básico, páginas estáticas, aparición de CSS y JavaScript.
+-  ** años 2000 ** : Web dinámica con PHP, ASP, MySQL, surgimiento de CMS como WordPress.
+-  ** Década de 2010 ** : Llegada de frameworks JavaScript (Angular, React, Vue), aparición de SPA y PWA, auge del desarrollo móvil.
+-  ** Actualidad ** : API-first design, microservicios, Jamstack, automatización CI/CD, integración con IA.
 
-4.-Control de versiones  
-**Git y GitHub:**  
-Herramientas para gestionar los cambios en el código, colaborar y mantener historial de versiones.  
-**Flujo de trabajo con ramas (branching, merge, pull requests):**  
-Las ramas permiten desarrollar nuevas características de forma aislada. Se fusionan (merge) cuando están listas y se revisan mediante pull requests.
 
----
 
-## Propósito de Aprendizaje 2: Desarrollar componentes y funcionalidades de una aplicación web
+Tipos de aplicaciones web (estáticas, dinámicas, SPA, PWA)
+## 2. Tipos de aplicaciones web
+<img width="266" height="157" alt="image" src="https://github.com/user-attachments/assets/ce60938e-7693-4e0e-a5dc-790ff3b168a8" />
 
-1.-Diseño e implementación del frontend  
-**Maquetación/Wireframe/Mockup:**  
-Son bocetos y diseños previos que permiten planificar la interfaz gráfica.  
-**API:**  
-El frontend consume datos de una API para mostrar información dinámica y enviar datos al backend.
+Las aplicaciones web se clasifican según su funcionamiento y experiencia de usuario:
 
-2.-Diseño e implementación del backend  
-**Servidor:**  
-Procesa las peticiones del cliente y ejecuta la lógica del sistema.  
-**Manejo de peticiones y respuestas HTTP:**  
-Utiliza métodos como GET, POST, PUT y DELETE para la comunicación entre cliente y servidor.  
-**Conexión a bases de datos (MySQL, PostgreSQL, MongoDB):**  
-Permite guardar, modificar y consultar datos almacenados.
+-  ** Estáticas ** : El contenido no cambia, se sirve tal cual está almacenado en el servidor (ej. páginas informativas en HTML).
+-  ** Dinámicas ** : El contenido se genera en función de la interacción del usuario o datos almacenados (ej. foros, tiendas online).
+-  ** SPA (Aplicación de página única) ** : Aplicaciones de una sola página, el contenido se actualiza dinámicamente sin recargar toda la página. Ejemplo: Gmail, Trello.
+-  ** PWA (Progressive Web App) ** : Aplicaciones web que ofrecen experiencia similar a las apps móviles, con capacidad offline, notificaciones push y posibilidad de instalarse en dispositivos.
 
-3.-Bases de datos  
-**Modelado de datos y relaciones:**  
-Diseño eficiente de tablas y relaciones para representar la información correctamente.  
-**ORM (Object Relational Mapping):**  
-Herramientas que simplifican la interacción entre el código y la base de datos.  
-**CRUD desde el backend:**  
-Implementa operaciones básicas: Crear, Leer, Actualizar y Eliminar registros.
+-
 
-4.-Seguridad básica en aplicaciones web  
-**Validación de formularios:**  
-Previene errores y ataques verificando la información enviada por los usuarios.  
-**Autenticación y autorización:**  
-Controla el acceso a recursos y funcionalidades según la identidad y permisos del usuario.
+2.Arquitectura de aplicaciones web
+Cliente-Servidor
+Arquitectura de tres capas (presentación, lógica, datos)
+Diseño REST y API-first
+## 3. Arquitectura de aplicaciones web
+<img width="289" height="137" alt="image" src="https://github.com/user-attachments/assets/68116f43-fee3-4f8c-aaa7-933a2b2d4ece" />
 
----
+Las aplicaciones web se estructuran en diferentes arquitecturas para optimizar su funcionamiento y escalabilidad:
 
-## Propósito de Aprendizaje 3: Implementar y desplegar una aplicación web funcional
+### Cliente-Servidor
+Modelo básico donde el cliente (navegador) solicita información al servidor, y este responde con los datos o páginas solicitadas.
 
-1.-Integración de frontend y backend  
-**Interfaz de usuario Frontend:**  
-Presenta los datos al usuario y permite la interacción.  
-**Manejo de API:**  
-Comunicación entre frontend y backend mediante peticiones HTTP (generalmente usando JSON).  
-**Proceso de Solicitud y Respuesta de Backend:**  
-El backend recibe peticiones, procesa la lógica y envía respuestas al frontend.
+### Arquitectura de tres capas
+-  ** Presentación ** : Interfaz con la que interactúa el usuario (HTML, CSS, JS).
+-  ** Lógica de negocio ** : Procesa las reglas de negocio y la interacción entre presentación y datos (PHP, Node.js, Python).
+-  ** Datos ** : Sistema de almacenamiento y recuperación de información (MySQL, MongoDB).
 
-2.-Almacenamiento en Servidor  
-**Tipos de servidores:**  
-Dedicados, compartidos y en la nube (AWS, Azure, Google Cloud).  
-**Servidores y servicios de hosting:**  
-Plataformas para publicar aplicaciones web (Heroku, Netlify, Vercel, etc).  
-**Proveedores de Servicios de Almacenamiento:**  
-Servicios para almacenar archivos y bases de datos (Amazon S3, Firebase, etc).
+### Diseño REST y API-first
+-  ** REST (Transferencia de estado representacional) ** : Estilo de arquitectura que utiliza HTTP y recursos identificados por URL. Facilitar la interoperabilidad entre sistemas.
+-  ** API-first Design ** : Enfoque donde la API se diseña primero, permitiendo que el frontend y backend se desarrollen de manera independiente y escalable.
+3 . -Lenguajes y tecnologías fundamentales
+HTML, CSS, JavaScript, PHP, MySQL
+## 4. Lenguajes y tecnologías fundamentales
 
-3.-Optimización y rendimiento  
-**Optimización de recursos (imágenes, scripts):**  
-Reducción de tamaño de archivos, uso eficiente de imágenes y scripts para mejorar la velocidad.  
-**Despliegue de aplicaciones web:**  
-Publicación y configuración de la aplicación en servidores y dominios.  
-**CI/CD básico:**  
-Automatización de pruebas y despliegues usando herramientas como GitHub Actions.  
-**Documentación del proyecto:**  
-Guías y manuales que explican el uso y mantenimiento del sistema.
+-  ** HTML (Lenguaje de marcado de hipertexto) ** : Estructura básica de la web.
+-  ** CSS (Cascading Style Sheets) ** : Define la apariencia y el diseño de las páginas web.
+-  ** JavaScript ** : Lenguaje para la interactividad y lógica del lado del cliente.
+-  ** PHP ** : Lenguaje de servidor para crear aplicaciones web dinámicas.
+-  ** MySQL ** : Sistema de gestión de bases de datos relacionales, usado junto con PHP.
+
+
+4.-Control de versiones
+Git y GitHub
+Flujo de trabajo con ramas (ramificación, fusión, aplicaciones de extracción)
+## 5. Control de versiones
+<img width="282" height="144" alt="image" src="https://github.com/user-attachments/assets/120d653e-30e1-48a3-a11a-95ff0ed96a7f" />
+
+El control de versiones es esencial para el desarrollo colaborativo y la gestión de cambios en proyectos web.
+
+### Git y GitHub
+-  ** Git ** : Sistema distribuido de control de versiones. Permite gestionar el historial de cambios y trabajar en equipo.
+-  ** GitHub ** : Plataforma basada en Git para alojar, colaborar y gestionar proyectos de software.
+
+### Flujo de trabajo con ramas
+-  ** Branching ** : Crear ramas para desarrollar funcionalidades o corregir errores sin afectar el código principal.
+-  ** Merge ** : Combinar los cambios realizados en diferentes ramas.
+-  ** Pull Requests ** : Solicitud para integrar los cambios de una rama a la rama principal, facilitando la revisión y colaboración.
+
+
+
+Propósito de Aprendizaje 2: Desarrollar componentes y funcionalidades de una aplicación web
+1.-Diseño e implementación del frontend
+Maqueta/Wireframe/Mockup
+API
+## 1. Diseño e implementación del frontend
+<img width="339" height="133" alt="image" src="https://github.com/user-attachments/assets/80d70d22-0445-4214-b058-d3efce7089d7" />
+
+El ** frontend ** es la parte de la aplicación web con la que interactúa el usuario. Su diseño y desarrollo incluye:
+
+### Maquetación, Wireframe y Mockup
+-  ** Maquetación ** : Proceso de organizar los elementos visuales en la página mediante HTML y CSS. Defina la estructura y el diseño.
+-  ** Wireframe ** : Esquema básico (boceto) de la distribución de los componentes en la interfaz sin detalles visuales.
+-  ** Mockup ** : Representación visual detallada del producto final, incluye colores, tipografía y estilos.
+
+### API
+- El frontend consume datos de una ** API ** (Interfaz de Programación de Aplicaciones) para mostrar información dinámica y realizar acciones como formularios, búsquedas y actualizaciones en tiempo real.
+
+
+
+2.-Diseño e implementación del backend
+Servidor
+Manejo de peticiones y respuestas HTTP
+Conexión a bases de datos (MySQL, PostgreSQL, MongoDB)
+## 2. Diseño e implementación del backend
+<img width="273" height="150" alt="image" src="https://github.com/user-attachments/assets/c53245ab-f5af-4618-8e6e-087ddf8a42fc" />
+
+El ** backend ** es la parte lógica y funcional de la aplicación, encargada de procesar datos, manejar solicitudes y conectarse a bases de datos.
+
+### Servidor
+- El servidor ejecuta el código backend (por ejemplo, Node.js, PHP, Python) y responde a las solicitudes del cliente.
+
+### Manejo de peticiones y respuestas HTTP
+- El backend recibe ** peticiones HTTP ** (GET, POST, PUT, DELETE) y genera respuestas (HTML, JSON, XML) para el cliente.
+- Se utilizan frameworks como Express (Node.js), Django (Python), Laravel (PHP) para facilitar este proceso.
+
+### Conexión a bases de datos
+- El backend se conecta a bases de datos como ** MySQL ** , ** PostgreSQL ** (relacionales) o ** MongoDB ** (NoSQL) para almacenar y recuperar datos.
+
+
+
+3.-Bases de datos
+Modelado de datos y relaciones
+ORM (Mapeo relacional de objetos)
+CRUD desde el backend
+## 3. Bases de datos
+<img width="300" height="147" alt="image" src="https://github.com/user-attachments/assets/6ace8c66-898a-4efb-b4e1-471bc1f76728" />
+
+Las bases de datos son fundamentales para guardar información y permitir su acceso eficiente.
+
+### Modelado de datos y relaciones
+- Definir las entidades y sus relaciones (uno a uno, uno a muchos, muchos a muchos).
+- Ejemplo: Usuarios y publicaciones, donde un usuario puede tener varias publicaciones.
+
+### ORM (Mapeo relacional de objetos)
+- Permite interactuar con la base de datos usando objetos en el lenguaje de programación.
+-Ejemplos : ** SQLAlchemy ** (Python), ** Eloquent ** (Laravel), ** TypeORM ** (Node.js).
+
+### CRUD desde el backend
+-  ** CRUD ** (Crear, Leer, Actualizar, Eliminar): Operaciones básicas para manipular datos desde el backend a través de endpoints y controladores.
+
+-
+4.-Seguridad básica en aplicaciones web
+Validación de formularios
+Autenticación y autorización
+## 4. Seguridad básica en aplicaciones web
+<img width="317" height="128" alt="image" src="https://github.com/user-attachments/assets/89906e81-037f-445f-b67d-6e7e49eb0a2f" />
+
+La seguridad es esencial para proteger datos y usuarios.
+
+### Validación de formularios
+- Verificar que los datos enviados por el usuario cumplen con los requisitos (tipo, formato, longitud).
+- Prevenir ataques como ** inyección SQL ** y ** XSS ** (Cross Site Scripting).
+
+### Autenticación y autorización
+-  ** Autenticación ** : Verificar la identidad del usuario (login con usuario y contraseña, tokens JWT).
+-  ** Autorización ** : Determinar qué acciones puede realizar el usuario según su rol (admin, usuario común).
+
+-  
+
+Propósito de Aprendizaje 3: Implementar y desplegar una aplicación web funcional
+1 . -Integración de frontend y backend
+Interfaz de usuario Frontend
+Manejo de API
+Proceso de Solicitud y Respuesta de Backend
+## 1. Integración de frontend y backend
+<img width="265" height="159" alt="image" src="https://github.com/user-attachments/assets/bc0aefda-dfeb-4dba-813a-6f3f98188b15" />
+
+La integración del frontend y backend es fundamental para lograr una aplicación web funcional que brinde una experiencia completa al usuario.
+
+### Interfaz de usuario Frontend
+Consiste en el desarrollo de la parte visual y de interacción de la aplicación utilizando tecnologías como HTML, CSS y JavaScript. El frontend se encarga de mostrar datos, captar entradas del usuario y enviar solicitudes al backend.
+
+### Manejo de API
+El frontend se comunica con el backend mediante API, principalmente a través de protocolos como HTTP. Las API permiten que el frontend obtenga y envíe datos, normalmente en formato JSON, utilizando métodos como GET, POST, PUT y DELETE.
+
+### Proceso de Solicitud y Respuesta de Backend
+El backend recibe las solicitudes del frontend, procesa la información, se conecta con la base de datos si es necesario y devuelve una respuesta adecuada. El flujo consiste en:
+- El usuario interactúa con la interfaz.
+- El frontend envía una solicitud a la API del backend.
+- El backend procesa la solicitud y responde con los datos o el resultado de la operación.
+- El frontend actualiza la interfaz según la respuesta recibida
